@@ -1,0 +1,299 @@
+EXPORTS
+    ActivateTx = ActivateTx@8 @1
+    ActivateTx@8 @2
+    CloseHW = CloseHW@0 @3
+    CloseHW@0 @4
+    GetFilters = GetFilters@12 @5
+    GetFilters@12 @6
+    GetHWLO = GetHWLO@0 @7
+    GetHWLO@0 @8
+    GetHWSR = GetHWSR@0 @9
+    GetHWSR@0 @10
+    GetMode = GetMode@0 @11
+    GetMode@0 @12
+    GetStatus = GetStatus@0 @13
+    GetStatus@0 @14
+    GetTune = GetTune@0 @15
+    GetTune@0 @16
+    HideGUI = HideGUI@0 @17
+    HideGUI@0 @18
+    IFLimitsChanged = IFLimitsChanged@8 @19
+    IFLimitsChanged@8 @20
+    InitHW = InitHW@12 @21
+    InitHW@12 @22
+    ModeChanged = ModeChanged@4 @23
+    ModeChanged@4 @24
+    OpenHW = OpenHW@0 @25
+    OpenHW@0 @26
+    RawDataReady = RawDataReady@16 @27
+    RawDataReady@16 @28
+    SetCallback = SetCallback@4 @29
+    SetCallback@4 @30
+    SetHWLO = SetHWLO@4 @31
+    SetHWLO@4 @32
+    SetModeRxTx = SetModeRxTx@4 @33
+    SetModeRxTx@4 @34
+    SetPreamp = SetPreamp@4 @35
+    SetPreamp@4 @36
+    ShowGUI = ShowGUI@0 @37
+    ShowGUI@0 @38
+    StartHW = StartHW@4 @39
+    StartHW@4 @40
+    StopHW = StopHW@0 @41
+    StopHW@0 @42
+    TuneChanged = TuneChanged@4 @43
+    TuneChanged@4 @44
+    VersionInfo = VersionInfo@12 @45
+    VersionInfo@12 @46
+
+IMPORTS
+
+    libusb-1.0.dll.GUID_DEVINTERFACE_LIBUSB0_FILTER
+    libusb-1.0.dll.GUID_DEVINTERFACE_USB_DEVICE
+    libusb-1.0.dll.GUID_DEVINTERFACE_USB_HOST_CONTROLLER
+    libusb-1.0.dll.GUID_DEVINTERFACE_USB_HUB
+    libusb-1.0.dll.INVALID_WINFD
+    libusb-1.0.dll._poll_fd
+    libusb-1.0.dll.active_contexts_list
+    libusb-1.0.dll.active_contexts_lock
+    libusb-1.0.dll.api_hid_available
+    libusb-1.0.dll.autoclaim_lock
+    libusb-1.0.dll.composite_driver_names
+    libusb-1.0.dll.discovered_devs_append
+    libusb-1.0.dll.epoch_time
+    libusb-1.0.dll.exit_polling
+    libusb-1.0.dll.fd_to_winfd
+    libusb-1.0.dll.handle_to_winfd
+    libusb-1.0.dll.hid_driver_names
+    libusb-1.0.dll.hires_frequency
+    libusb-1.0.dll.hires_ticks_to_ps
+    libusb-1.0.dll.htab_filled
+    libusb-1.0.dll.htab_size
+    libusb-1.0.dll.htab_table
+    libusb-1.0.dll.htab_write_mutex
+    libusb-1.0.dll.hub_driver_names
+    libusb-1.0.dll.init_polling
+    libusb-1.0.dll.is_polling_set
+    libusb-1.0.dll.libusb_alloc_streams
+    libusb-1.0.dll.libusb_alloc_streams@16
+    libusb-1.0.dll.libusb_alloc_transfer
+    libusb-1.0.dll.libusb_alloc_transfer@4
+    libusb-1.0.dll.libusb_attach_kernel_driver
+    libusb-1.0.dll.libusb_attach_kernel_driver@8
+    libusb-1.0.dll.libusb_bulk_transfer
+    libusb-1.0.dll.libusb_bulk_transfer@24
+    libusb-1.0.dll.libusb_cancel_transfer
+    libusb-1.0.dll.libusb_cancel_transfer@4
+    libusb-1.0.dll.libusb_claim_interface
+    libusb-1.0.dll.libusb_claim_interface@8
+    libusb-1.0.dll.libusb_clear_halt
+    libusb-1.0.dll.libusb_clear_halt@8
+    libusb-1.0.dll.libusb_close
+    libusb-1.0.dll.libusb_close@4
+    libusb-1.0.dll.libusb_control_transfer
+    libusb-1.0.dll.libusb_control_transfer@32
+    libusb-1.0.dll.libusb_detach_kernel_driver
+    libusb-1.0.dll.libusb_detach_kernel_driver@8
+    libusb-1.0.dll.libusb_error_name
+    libusb-1.0.dll.libusb_error_name@4
+    libusb-1.0.dll.libusb_event_handler_active
+    libusb-1.0.dll.libusb_event_handler_active@4
+    libusb-1.0.dll.libusb_event_handling_ok
+    libusb-1.0.dll.libusb_event_handling_ok@4
+    libusb-1.0.dll.libusb_exit
+    libusb-1.0.dll.libusb_exit@4
+    libusb-1.0.dll.libusb_free_bos_descriptor
+    libusb-1.0.dll.libusb_free_bos_descriptor@4
+    libusb-1.0.dll.libusb_free_config_descriptor
+    libusb-1.0.dll.libusb_free_config_descriptor@4
+    libusb-1.0.dll.libusb_free_container_id_descriptor
+    libusb-1.0.dll.libusb_free_container_id_descriptor@4
+    libusb-1.0.dll.libusb_free_device_list
+    libusb-1.0.dll.libusb_free_device_list@8
+    libusb-1.0.dll.libusb_free_ss_endpoint_companion_descriptor
+    libusb-1.0.dll.libusb_free_ss_endpoint_companion_descriptor@4
+    libusb-1.0.dll.libusb_free_ss_usb_device_capability_descriptor
+    libusb-1.0.dll.libusb_free_ss_usb_device_capability_descriptor@4
+    libusb-1.0.dll.libusb_free_streams
+    libusb-1.0.dll.libusb_free_streams@12
+    libusb-1.0.dll.libusb_free_transfer
+    libusb-1.0.dll.libusb_free_transfer@4
+    libusb-1.0.dll.libusb_free_usb_2_0_extension_descriptor
+    libusb-1.0.dll.libusb_free_usb_2_0_extension_descriptor@4
+    libusb-1.0.dll.libusb_get_active_config_descriptor
+    libusb-1.0.dll.libusb_get_active_config_descriptor@8
+    libusb-1.0.dll.libusb_get_bos_descriptor
+    libusb-1.0.dll.libusb_get_bos_descriptor@8
+    libusb-1.0.dll.libusb_get_bus_number
+    libusb-1.0.dll.libusb_get_bus_number@4
+    libusb-1.0.dll.libusb_get_config_descriptor
+    libusb-1.0.dll.libusb_get_config_descriptor@12
+    libusb-1.0.dll.libusb_get_config_descriptor_by_value
+    libusb-1.0.dll.libusb_get_config_descriptor_by_value@12
+    libusb-1.0.dll.libusb_get_configuration
+    libusb-1.0.dll.libusb_get_configuration@8
+    libusb-1.0.dll.libusb_get_container_id_descriptor
+    libusb-1.0.dll.libusb_get_container_id_descriptor@12
+    libusb-1.0.dll.libusb_get_device
+    libusb-1.0.dll.libusb_get_device@4
+    libusb-1.0.dll.libusb_get_device_address
+    libusb-1.0.dll.libusb_get_device_address@4
+    libusb-1.0.dll.libusb_get_device_descriptor
+    libusb-1.0.dll.libusb_get_device_descriptor@8
+    libusb-1.0.dll.libusb_get_device_list
+    libusb-1.0.dll.libusb_get_device_list@8
+    libusb-1.0.dll.libusb_get_device_speed
+    libusb-1.0.dll.libusb_get_device_speed@4
+    libusb-1.0.dll.libusb_get_max_iso_packet_size
+    libusb-1.0.dll.libusb_get_max_iso_packet_size@8
+    libusb-1.0.dll.libusb_get_max_packet_size
+    libusb-1.0.dll.libusb_get_max_packet_size@8
+    libusb-1.0.dll.libusb_get_next_timeout
+    libusb-1.0.dll.libusb_get_next_timeout@8
+    libusb-1.0.dll.libusb_get_parent
+    libusb-1.0.dll.libusb_get_parent@4
+    libusb-1.0.dll.libusb_get_pollfds
+    libusb-1.0.dll.libusb_get_pollfds@4
+    libusb-1.0.dll.libusb_get_port_number
+    libusb-1.0.dll.libusb_get_port_number@4
+    libusb-1.0.dll.libusb_get_port_numbers
+    libusb-1.0.dll.libusb_get_port_numbers@12
+    libusb-1.0.dll.libusb_get_port_path
+    libusb-1.0.dll.libusb_get_port_path@16
+    libusb-1.0.dll.libusb_get_ss_endpoint_companion_descriptor
+    libusb-1.0.dll.libusb_get_ss_endpoint_companion_descriptor@12
+    libusb-1.0.dll.libusb_get_ss_usb_device_capability_descriptor
+    libusb-1.0.dll.libusb_get_ss_usb_device_capability_descriptor@12
+    libusb-1.0.dll.libusb_get_string_descriptor_ascii
+    libusb-1.0.dll.libusb_get_string_descriptor_ascii@16
+    libusb-1.0.dll.libusb_get_usb_2_0_extension_descriptor
+    libusb-1.0.dll.libusb_get_usb_2_0_extension_descriptor@12
+    libusb-1.0.dll.libusb_get_version
+    libusb-1.0.dll.libusb_get_version@0
+    libusb-1.0.dll.libusb_handle_events
+    libusb-1.0.dll.libusb_handle_events@4
+    libusb-1.0.dll.libusb_handle_events_completed
+    libusb-1.0.dll.libusb_handle_events_completed@8
+    libusb-1.0.dll.libusb_handle_events_locked
+    libusb-1.0.dll.libusb_handle_events_locked@8
+    libusb-1.0.dll.libusb_handle_events_timeout
+    libusb-1.0.dll.libusb_handle_events_timeout@8
+    libusb-1.0.dll.libusb_handle_events_timeout_completed
+    libusb-1.0.dll.libusb_handle_events_timeout_completed@12
+    libusb-1.0.dll.libusb_has_capability
+    libusb-1.0.dll.libusb_has_capability@4
+    libusb-1.0.dll.libusb_hotplug_deregister_callback
+    libusb-1.0.dll.libusb_hotplug_deregister_callback@8
+    libusb-1.0.dll.libusb_hotplug_register_callback
+    libusb-1.0.dll.libusb_hotplug_register_callback@36
+    libusb-1.0.dll.libusb_init
+    libusb-1.0.dll.libusb_init@4
+    libusb-1.0.dll.libusb_interrupt_transfer
+    libusb-1.0.dll.libusb_interrupt_transfer@24
+    libusb-1.0.dll.libusb_kernel_driver_active
+    libusb-1.0.dll.libusb_kernel_driver_active@8
+    libusb-1.0.dll.libusb_lock_event_waiters
+    libusb-1.0.dll.libusb_lock_event_waiters@4
+    libusb-1.0.dll.libusb_lock_events
+    libusb-1.0.dll.libusb_lock_events@4
+    libusb-1.0.dll.libusb_open
+    libusb-1.0.dll.libusb_open@8
+    libusb-1.0.dll.libusb_open_device_with_vid_pid
+    libusb-1.0.dll.libusb_open_device_with_vid_pid@12
+    libusb-1.0.dll.libusb_pollfds_handle_timeouts
+    libusb-1.0.dll.libusb_pollfds_handle_timeouts@4
+    libusb-1.0.dll.libusb_ref_device
+    libusb-1.0.dll.libusb_ref_device@4
+    libusb-1.0.dll.libusb_release_interface
+    libusb-1.0.dll.libusb_release_interface@8
+    libusb-1.0.dll.libusb_reset_device
+    libusb-1.0.dll.libusb_reset_device@4
+    libusb-1.0.dll.libusb_set_auto_detach_kernel_driver
+    libusb-1.0.dll.libusb_set_auto_detach_kernel_driver@8
+    libusb-1.0.dll.libusb_set_configuration
+    libusb-1.0.dll.libusb_set_configuration@8
+    libusb-1.0.dll.libusb_set_debug
+    libusb-1.0.dll.libusb_set_debug@8
+    libusb-1.0.dll.libusb_set_interface_alt_setting
+    libusb-1.0.dll.libusb_set_interface_alt_setting@12
+    libusb-1.0.dll.libusb_set_pollfd_notifiers
+    libusb-1.0.dll.libusb_set_pollfd_notifiers@16
+    libusb-1.0.dll.libusb_setlocale
+    libusb-1.0.dll.libusb_setlocale@4
+    libusb-1.0.dll.libusb_strerror
+    libusb-1.0.dll.libusb_strerror@4
+    libusb-1.0.dll.libusb_submit_transfer
+    libusb-1.0.dll.libusb_submit_transfer@4
+    libusb-1.0.dll.libusb_transfer_get_stream_id
+    libusb-1.0.dll.libusb_transfer_get_stream_id@4
+    libusb-1.0.dll.libusb_transfer_set_stream_id
+    libusb-1.0.dll.libusb_transfer_set_stream_id@8
+    libusb-1.0.dll.libusb_try_lock_events
+    libusb-1.0.dll.libusb_try_lock_events@4
+    libusb-1.0.dll.libusb_unlock_event_waiters
+    libusb-1.0.dll.libusb_unlock_event_waiters@4
+    libusb-1.0.dll.libusb_unlock_events
+    libusb-1.0.dll.libusb_unlock_events@4
+    libusb-1.0.dll.libusb_unref_device
+    libusb-1.0.dll.libusb_unref_device@4
+    libusb-1.0.dll.libusb_wait_for_event
+    libusb-1.0.dll.libusb_wait_for_event@8
+    libusb-1.0.dll.overlapped_to_winfd
+    libusb-1.0.dll.pipe_number
+    libusb-1.0.dll.poll_fd
+    libusb-1.0.dll.request_count
+    libusb-1.0.dll.sub_api_name
+    libusb-1.0.dll.timer_mutex
+    libusb-1.0.dll.timer_request
+    libusb-1.0.dll.timer_response
+    libusb-1.0.dll.timer_thread
+    libusb-1.0.dll.timer_tp
+    libusb-1.0.dll.usb_api_backend
+    libusb-1.0.dll.usbi_add_pollfd
+    libusb-1.0.dll.usbi_alloc_device
+    libusb-1.0.dll.usbi_backend
+    libusb-1.0.dll.usbi_close
+    libusb-1.0.dll.usbi_cond_broadcast
+    libusb-1.0.dll.usbi_cond_destroy
+    libusb-1.0.dll.usbi_cond_init
+    libusb-1.0.dll.usbi_cond_signal
+    libusb-1.0.dll.usbi_cond_timedwait
+    libusb-1.0.dll.usbi_cond_wait
+    libusb-1.0.dll.usbi_connect_device
+    libusb-1.0.dll.usbi_create_fd
+    libusb-1.0.dll.usbi_default_context
+    libusb-1.0.dll.usbi_device_cache_descriptor
+    libusb-1.0.dll.usbi_disconnect_device
+    libusb-1.0.dll.usbi_fd_notification
+    libusb-1.0.dll.usbi_free_fd
+    libusb-1.0.dll.usbi_get_config_index_by_value
+    libusb-1.0.dll.usbi_get_device_by_session_id
+    libusb-1.0.dll.usbi_get_tid
+    libusb-1.0.dll.usbi_handle_disconnect
+    libusb-1.0.dll.usbi_handle_transfer_cancellation
+    libusb-1.0.dll.usbi_handle_transfer_completion
+    libusb-1.0.dll.usbi_hotplug_deregister_all
+    libusb-1.0.dll.usbi_hotplug_match
+    libusb-1.0.dll.usbi_io_exit
+    libusb-1.0.dll.usbi_io_init
+    libusb-1.0.dll.usbi_log
+    libusb-1.0.dll.usbi_log_v
+    libusb-1.0.dll.usbi_mutex_destroy
+    libusb-1.0.dll.usbi_mutex_init
+    libusb-1.0.dll.usbi_mutex_lock
+    libusb-1.0.dll.usbi_mutex_static_lock
+    libusb-1.0.dll.usbi_mutex_static_unlock
+    libusb-1.0.dll.usbi_mutex_trylock
+    libusb-1.0.dll.usbi_mutex_unlock
+    libusb-1.0.dll.usbi_parse_descriptor
+    libusb-1.0.dll.usbi_pipe
+    libusb-1.0.dll.usbi_poll
+    libusb-1.0.dll.usbi_read
+    libusb-1.0.dll.usbi_remove_pollfd
+    libusb-1.0.dll.usbi_sanitize_device
+    libusb-1.0.dll.usbi_write
+    libusb-1.0.dll.windows_backend
+    libusb-1.0.dll.windows_clock_gettime_threaded
+    libusb-1.0.dll.windows_clock_gettime_threaded@4
+    libusb-1.0.dll.windows_version
+    libusb-1.0.dll.winusbx_driver_names

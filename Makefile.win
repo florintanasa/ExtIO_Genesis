@@ -1,0 +1,51 @@
+# Project: ExtIO_Genesis
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = extio.o bsd_string.o genesis.o g59cmd.o g59cmdpacket.o usbutil.o si570.o simpleini-master/ConvertUTF.o
+LINKOBJ  = extio.o bsd_string.o genesis.o g59cmd.o g59cmdpacket.o usbutil.o si570.o simpleini-master/ConvertUTF.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc libusb-1.0.dll -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ExtIO_Genesis.dll
+CXXFLAGS = $(CXXINCS) -m32 -std=gnu++11 -DBUILDING_DLL=1
+CFLAGS   = $(INCS) -m32 -std=gnu++11 -DBUILDING_DLL=1
+RM       = rm.exe -f
+DEF      = libExtIO_Genesis.def
+STATIC   = libExtIO_Genesis.a
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN) $(DEF) $(STATIC)
+
+$(BIN): $(LINKOBJ)
+	$(CPP) -shared $(LINKOBJ) -o $(BIN) $(LIBS) -Wl,--output-def,$(DEF),--out-implib,$(STATIC),--add-stdcall-alias
+
+extio.o: extio.cpp
+	$(CPP) -c extio.cpp -o extio.o $(CXXFLAGS)
+
+bsd_string.o: bsd_string.c
+	$(CC) -c bsd_string.c -o bsd_string.o $(CFLAGS)
+
+genesis.o: genesis.cpp
+	$(CPP) -c genesis.cpp -o genesis.o $(CXXFLAGS)
+
+g59cmd.o: g59cmd.cpp
+	$(CPP) -c g59cmd.cpp -o g59cmd.o $(CXXFLAGS)
+
+g59cmdpacket.o: g59cmdpacket.cpp
+	$(CPP) -c g59cmdpacket.cpp -o g59cmdpacket.o $(CXXFLAGS)
+
+usbutil.o: usbutil.cpp
+	$(CPP) -c usbutil.cpp -o usbutil.o $(CXXFLAGS)
+
+si570.o: si570.c
+	$(CC) -c si570.c -o si570.o $(CFLAGS)
+
+simpleini-master/ConvertUTF.o: simpleini-master/ConvertUTF.c
+	$(CC) -c simpleini-master/ConvertUTF.c -o simpleini-master/ConvertUTF.o $(CFLAGS)
